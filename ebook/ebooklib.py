@@ -210,7 +210,7 @@ class Ebook:
         if not sf.is_dir():
             raise FolderNotFoundError('{} not found'.format(source_folder))
         self.source_folder = sf
-        self.work_folder = self.source_folder / ".{}.{}".format(format_file_name(self.title), datetime.datetime.now())
+        self.work_folder = self.source_folder / ".{}.{}".format(format_file_name(self.title), datetime.datetime.now().timestamp())
         self.work_folder.mkdir()
         self._eu = EbookUtil(self)
 
