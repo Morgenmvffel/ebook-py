@@ -17,7 +17,7 @@ Want to see what it looks like? Take a look at [examples](./examples)!
 ## Installation
 
 1. (optional) Source your virtualenv.
-2. `pip install git+https://github.com/jachinlin/ebook-py.git`
+2. `pip install git+https://github.com/Morgenmvffel/ebook-py.git`
 
 ## Usage
 
