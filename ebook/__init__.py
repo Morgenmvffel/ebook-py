@@ -78,7 +78,7 @@ def _parse_headers(toc_file_name):
     return title, headers_info
 
 
-def make_ebook(source_dir: str, output_dir: str, format="epub") -> str:
+def make_ebook(source_dir: str, output_dir: str,author: str = None, format="epub") -> str:
     """
    make ebook with the files in source_dir and put the ebook made in output_dir
    :param source_dir:
@@ -88,7 +88,7 @@ def make_ebook(source_dir: str, output_dir: str, format="epub") -> str:
     # parse toc.md file
     toc_file_name = os.path.join(source_dir, 'toc.md')
     title, headers = _parse_headers(toc_file_name)
-    ebook = Ebook(title, source_folder=source_dir, ebook_format=format)
+    ebook = Ebook(title, source_folder=source_dir, ebook_format=format, author=author)
     cover = os.path.join(source_dir, 'cover.jpg')
     if os.path.isfile(cover):
         ebook.set_cover(cover_path=cover)
