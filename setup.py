@@ -19,7 +19,7 @@ class bdist_wheel(_bdist_wheel):
         return python, abi, plat
 
 
-version = '1.1.0'
+version = '1.1.1'
 
 setup(
     name='ebook',
